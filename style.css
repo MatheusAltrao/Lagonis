@@ -598,7 +598,7 @@ ul li:nth-child(4) a {
 }
 
 [data-anime='right'] {
-  transform: translateX(-50px);
+  transform: translateX(50px);
 }
 
 [data-anime='top'] {
