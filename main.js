@@ -94,7 +94,8 @@ window.addEventListener('scroll', () => {
 
 buttonTop.onclick = () => {
   window.scroll({
-    top: 0
+    top: 0,
+    behavior: 'smooth'
   })
 }
 
