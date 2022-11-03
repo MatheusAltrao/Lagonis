@@ -90,15 +90,15 @@ body.hidden {
   width: 100%;
   border-bottom: 1px solid var(--primary-color);
 
-  backdrop-filter: blur(60px);
-  -webkit-backdrop-filter: blur(13.5px);
+  background-color: var(--second-color);
 
   z-index: 999;
 }
 
-header.active {
-  box-shadow: 32px 8px 32px 0 rgba(249, 249, 250, 0.37);
+#header.active {
+  box-shadow: 0 5px 15px 0px rgba(52, 64, 240, 0.2);
 }
+
 
 #header .content {
   display: flex;
@@ -272,7 +272,7 @@ img {
 
 #bestMoments {
   margin-top: 3rem;
-  height: 30vh;
+  height: 40vh;
   width: 100%;
 
   display: grid;
@@ -460,14 +460,14 @@ textarea {
 .buttonTop {
   position: fixed;
   bottom: 1rem;
-  right: 1rem;
+  right: 0.5rem;
   z-index: 99;
 
   opacity: 0;
   visibility: hidden;
   transform: translateX(30px);
 
-
+  background-color: var(--second-color);
   border: 1px solid var(--primary-color);
   border-radius: 8px;
 
@@ -582,6 +582,33 @@ ul li:nth-child(4) a {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+
+
+/* data */
+
+[data-anime] {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+[data-anime='left'] {
+  transform: translateX(-50px);
+}
+
+[data-anime='right'] {
+  transform: translateX(-50px);
+}
+
+[data-anime='top'] {
+  transform: translateY(-50px);
+}
+
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }
 
 

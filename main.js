@@ -89,6 +89,7 @@ const header = document.getElementById('header')
 window.addEventListener('scroll', () => {
   showButtonTop()
   headerScroll()
+  animeScroll()
 })
 
 
@@ -100,7 +101,7 @@ buttonTop.onclick = () => {
 }
 
 function headerScroll() {
-  if (window.scroll > 0) {
+  if (scrollY > 0) {
     header.classList.add('active')
   } else {
     header.classList.remove('active')
@@ -116,7 +117,7 @@ const target = document.querySelectorAll('[data-anime]')
 const animationClass = 'animate'
 
 function animeScroll() {
-  const windowTop = window.pageYOffset + (window.innerHeight * 0.75)
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.85)
   target.forEach((e) => {
     if (windowTop > e.offsetTop) {
       e.classList.add(animationClass)
